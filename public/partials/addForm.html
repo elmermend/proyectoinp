@@ -1,0 +1,60 @@
+
+<div class="col-md-5">
+
+   
+    <div class="panel panel-default">
+
+        
+        <div class="panel-heading">
+            <h2 class="panel-title text-center">Crea tu Evento <span class="glyphicon glyphicon-map-marker"></span></h2>
+        </div>
+
+       
+        <div class="panel-body">
+
+            
+            <form name ="addForm" novalidate>
+
+              
+                <div class="form-group">
+                    <label for="nombreevento">Nombre del Evento<span class="badge">Llenar todos los campos</span></label>
+                    <input type="text" class="form-control" id="nombreevento" placeholder="Nombre del evento" ng-model="formData.nombreevento" required>
+                </div>
+                <div class="form-group">
+                    <label for="organizador">Organizador</label>
+                    <input type="text" class="form-control" id="organizador" placeholder="Elmer" ng-model="formData.organizador" required>
+                </div>
+
+                
+                <div class="form-group">
+                    <label for="edad">Edad</label>
+                    <input type="number" class="form-control" id="edad" placeholder="20" ng-model="formData.edad" required>
+                </div>
+                <div class="form-group">
+                    <label for="descripcion">Descripcion</label>
+                    <input type="text" class="form-control" id="descripcion" placeholder="que habra en el evento" ng-model="formData.descripcion" required>
+                </div>
+                <div class="form-group">
+                    <label for="fecha">Fecha</label>
+                    <input type="date" class="form-control" id="fecha" placeholder="que habra en el evento" ng-model="formData.fecha" required>
+                </div>
+                <div class="form-group">
+                    <label for="latitude">Latitud</label>
+                    <input type="text" class="form-control" id="latitude" value="39.500" ng-model="formData.latitude" >
+                </div>
+                <div class="form-group">
+                    <label for="longitude">Longitud</label>
+                    <input type="text" class="form-control" id="longitude" value="-98.350" ng-model="formData.longitude" >
+                </div>
+                <div class="form-group">
+                   
+                    <label for="verified">Localizacion por HTML5? <span><button ng-click="refreshLoc()" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-refresh"></span></button></span></label>
+                    <input type="text" class="form-control" id="verified" placeholder= "Activa tu localizacion" ng-model="formData.htmlverified" readonly>
+                </div>
+
+                
+                <button type="submit" class="btn btn-danger btn-block" ng-click="createUser()" ng-disabled="addForm.$invalid">Crear Evento</button>
+            </form>
+        </div>
+    </div>
+</div>
